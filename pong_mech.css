@@ -1,0 +1,87 @@
+
+body {
+
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-image: "background.png";
+margin: 0;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: aqua;
+}
+
+#game-container {
+
+position: relative;
+width: 800px;
+height: 400px;
+background-color:blue;
+border: 5px solid black;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+border-radius: 10px;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.paddle {
+position: absolute;
+width: 10px;
+height: 100px;
+background-color: rgb(138, 110, 95);
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#paddle1 {
+right: 10px;
+top: 150px;
+}
+
+#paddle2 {
+right: 10px;
+top: 150px;
+}
+
+#ball {
+position: absolute;
+width: 20px;
+height: 20px;
+background-color: #ffd700;
+border-radius: 50%;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#score {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#player1-score {
+text-align: center;
+flex: 1;
+}
+
+#player2-score {
+text-align: center;
+flex: 1;
+}
+
+#game-container::before {
+content: '';
+position: absolute;
+top: 0;
+left: 50%;
+width: 4px;
+height: 100%;
+background-color: #fff;
+transform: translateX(-50%);
+
+}

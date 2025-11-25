@@ -39,7 +39,7 @@ let dyd =
 Math.floor(Math.random() * 2);
 
 document.addEventListener('keydown', (e) => {
-    if (e.key == 'Enter') {
+    if (e.key == 'e') {
         gameState = gameState ==
         'start' ? 'play' : 'start';
         if (gameState == 'play') {
@@ -122,7 +122,7 @@ if (gameState == 'play') {
     paddle_1_coord.bottom
     ) {
         dxd = 1;
-        dx = Math.floor(Msth.random() * 4) + 3;
+        dx = Math.floor(Math.random() * 4) + 3;
         dy = Math.floor(Math.random() * 4) + 3;
     }
     if (

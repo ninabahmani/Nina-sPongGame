@@ -8,9 +8,11 @@ body {
 height: 100vh;
 width: 100vw;
 background-image: url(background.png);
-display: flex no-repeat;
+background-repeat: no-repeat;
+display: cover;
 justify-content: center;
 align-items: center;
+  margin: center;
 }
 
 .board {
@@ -18,6 +20,8 @@ height: 85vh;
 width: 80vw;
 background-image: url(menu_board_t.png);
 border-radius: 14px;
+background-repeat: no-repeat;
+  margin: center;
 }
 
 .ball {

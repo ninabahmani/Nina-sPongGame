@@ -5,20 +5,13 @@ box-sizing: border-box;
 }
 
 body {
-height: 100vh;
-width: 100vw;
-background-image: url(background.png);
+
+background-image: url(background.png); width:(100%); height:(100%); display:block;
 background-repeat: no-repeat;
-display: cover;
-justify-content: center;
-align-items: center;
-  margin: center;
 }
 
 .board {
-height: 85vh;
-width: 80vw;
-background-image: url(menu_board_t.png);
+background-image: url(menu_board_t.png); width:500px; height:500px; display:block;
 border-radius: 14px;
 background-repeat: no-repeat;
   margin: center;

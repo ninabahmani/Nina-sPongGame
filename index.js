@@ -45,7 +45,7 @@ document.addEventListener('keydown', (e) => {
         if (gameState == 'play') {
             message.innerHTML = 'Game Started';
             message.style.left = 42 + 'vw';
-            requestAnimationFrame(() => {
+            requestAnimationFrame(() =>   {
                 dx =
                 Math.floor(Math.random() * 4) + 3;
                 dy =

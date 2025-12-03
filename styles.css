@@ -6,8 +6,9 @@ box-sizing: border-box;
 
 body {
 
-background-image: url(background.png); width:(100%); height:(100%); display:block;
+background-image: url(background_fit.png); width: 16.0"; height: 9.0"; display:block;
 background-repeat: no-repeat;
+position: ce nter;
 }
 
 .board {

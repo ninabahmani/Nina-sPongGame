@@ -2,17 +2,14 @@
     text-align: center;
 }
 #gameBoard{
-    border: 3px solid;
-    border-color: #432818;
+    border: 5px solid #432818;
 }
 #scoreText{
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
+    font-family: monospace;
     font-size: 100px;
 }
 #resetBtn{
-    font-family: "LoveMolly", sans-serrif;
-    color: black;
+    font-family: "LoveMolly", sans-serif;
     font-size: 22px;
     width: 100px;
     height: 50px;

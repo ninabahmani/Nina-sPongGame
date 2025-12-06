@@ -1,24 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="styles.css">
-<link rel="javascript" href="index.js">
-
-<title> game START! </title>
-
+    <!-- add a back button to the homepage soon-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<div id="gameContainer">
-<canvas id="gameBoard" width="500" height="500">
-    <div id="socreText">0 : 0</div>
-    <button id="resetBtn">Reset</button>
-</canvas>
-</div>
+    <center>
+    <div id="gameContainer">
+        <canvas id="gameBoard" width="500" height="500"></canvas>
+        <div id="scoreText">0 : 0</div>
+        <button id="resetBtn">Reset</button>
+    </div>
+    <script src="index.js"></script>
 
-        <script src="index.js">
+    
+</center>
+</body>
 
-        </script>
-    </body>
-    </html>
+<style>
+    @font-face {
+    font-family: 'LoveMolly';
+    src: url('LoveMolly.ttf') format('ttf'), /* Modern browsers */
+            url('LoveMolly.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+</style>
+</html>
 
 

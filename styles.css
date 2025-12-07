@@ -5,7 +5,7 @@
     border: 5px solid #432818;
 }
 #scoreText{
-    font-family: monospace;
+    font-family: "LoveMolly", sans-serif;
     font-size: 100px;
 }
 #resetBtn{
@@ -16,4 +16,12 @@
     border: 4px solid;
     border-radius: 15px;
     cursor: pointer;
+}
+
+ @font-face {
+    font-family: 'LoveMolly';
+    src: url('LoveMolly.ttf') format('ttf'), /* Modern browsers */
+            url('LoveMolly.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
 }

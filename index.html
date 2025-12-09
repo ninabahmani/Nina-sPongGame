@@ -21,6 +21,58 @@
 
 <center>
 <div class="buttons"></div>
+
+<head>
+ <script>
+    function playGifAndRedirect() {
+      // Show the GIF
+      document.getElementById("gif").style.display = "block";
+
+      // Redirect after 5 seconds (adjust to GIF length)
+      setTimeout(function() {
+        window.location.href = "game.html";
+      }, 2700);
+    }
+  </script>
+</head>
+<body>
+  <!-- hide transition gif initially -->
+  <img id="gif" src="transition.gif" alt="Loading animation" style="display:none;">
+
+  <!-- image acting as button to the game -->
+  <img src="images/play_button.png" alt="Go to GAME" style="cursor:pointer;" onclick="playGifAndRedirect()">
+</body>
+<style>
+    /* Reset margins and make body fill the viewport */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* Make the GIF cover the whole page */
+    #gif {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* ensures it scales nicely */
+      display: block;
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <a href="game.html"> <img src="images/play_button.png" alt="play button" width="200" height="100">
 </img>
 </a>

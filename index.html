@@ -22,6 +22,10 @@
 <center>
 <div class="buttons"></div>
 
+
+<!-- okay gif animation for play button -->
+
+
 <head>
  <script>
     function playGifAndRedirect() {
@@ -40,7 +44,9 @@
   <img id="gif" src="transition.gif" alt="Loading animation" style="display:none;">
 
   <!-- image acting as button to the game -->
-  <img src="images/play_button.png" alt="Go to GAME" style="cursor:pointer;" onclick="playGifAndRedirect()">
+  <img src="images/play_button.png" alt="Go to GAME" style="cursor:pointer;" align-items:center; onclick="playGifAndRedirect()">
+
+  
 </body>
 <style>
     /* Reset margins and make body fill the viewport */
@@ -67,30 +73,66 @@
 
 
 
+<!-- okay gif animation for settings page here do not follow the one above okay okay ilysm nina -->
+
+
+
+
+<head>
+ <script>
+    function playGif2AndRedirect() {
+      // Show the GIF
+      document.getElementById("gif2").style.display = "block";
+
+      // Redirect after 5 seconds (adjust to GIF length)
+      setTimeout(function() {
+        window.location.href = "settings.html";
+      }, 2700);
+    }
+  </script>
+</head>
+<body>
+  <!-- hide transition gif initially -->
+  <img id="gif2" src="transition2.gif" alt="Loading animation" style="display:none;">
+
+  <!-- image acting as button to the game -->
+  <img src="images/settings_button.png" alt="Go to SETTINGS" style="cursor:pointer;" align-items:center; onclick="playGif2AndRedirect()">
+
+  
+</body>
+<style>
+    /* Reset margins and make body fill the viewport */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* Make the GIF cover the whole page */
+    #gif2 {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* ensures it scales nicely */
+      display: block;
+    }
+  </style>
 
 
 
 
 
 
-<a href="game.html"> <img src="images/play_button.png" alt="play button" width="200" height="100">
-</img>
-</a>
-<br>
-<br>
-<a href="settings.html"> <img src="images/settings_button.png" alt="settings button" width="200" height="100">
-</img>
+
 </a>
 </div>
 </center>
-<br>
-<br>
 <br>
 
 <div class="footer">
 <p> made with love by <a href="https://ninasresources.neocities.org/">ninabina♡</a>
     <br>
-    leave a plesant comment on my <a href="https://ninasresources.neocities.org/guestbook.html">guestbook</a>, will you?
+    leave a pleasant comment on my <a href="https://ninasresources.neocities.org/guestbook.html">guestbook</a>, will you?
 
 <!-- possibly make a blog journal about this game on ur neocities once your done and (maybe) how its on steam!!! 
  oh oh possibly make little ads for it like how dimden did as well!!!-->

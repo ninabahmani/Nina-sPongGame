@@ -5,6 +5,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
 <link rel="manifest" href="favicon_io/site.webmanifest">
+
  <audio src="tobyfox.mp3" autoplay loop></audio>
 
 <body>
@@ -12,6 +13,7 @@
 
 <a href="index.html">back</a>
 <!-- add backbutton here in the future please nina -->
+ <!-- also fix the audio problem too please ok ily nina-->
  
 <div class="title">
 <h1> Settings </h1>
@@ -28,6 +30,34 @@
 
 
 <div class="alphys">
+    <h2> Basic Config</h2>
+    <br>
+    <!-- note: i only used ai on this part to refine the script for any errors, not make the script. this coding language is very new to me, and i asked a friend for help-->
+<audio id="myAudio" src="tobyfox.mp3" autoplay></audio>
+<button id="muteBtn">Mute Audio</button>
+<input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+
+<script>
+const audio = document.getElementById("myAudio");
+const muteBtn = document.getElementById("muteBtn");
+const volumeSlider = document.getElementById("volumeSlider");
+
+audio.play().catch(() => {
+    console.log("Autoplay is blocked. Waiting for user's action...");
+});
+
+muteBtn.addEventListener("click", () => {
+    audio.muted = !audio.muted;
+    muteBtn.textContent = audio.muted ? "Unmute" : "Mute";
+});
+
+volumeSlider.addEventListener("input", () => {
+    audio.volume = volumeSlider.value;
+})
+
+
+</script>
+
     <h2> Contact/Support </h2>
     <br>
 <h3> have a bug, error, or want to leave me a sweet recommendation? please email me at ninanina22226666@gmail.com!
@@ -55,7 +85,7 @@
     <h3> The Favicon Convertor Generator is called <a href="https://www.favicon.io"> Favicon.io</a>, which was used in this project. The favicon image, however, is a coffee bean drawn by me. <B> The part where I used it is labeled in the source coding and counts for the Hack CLub: Milkyway 30% AI rule. </B></h3>
     <h4> <a href="https://favicon.io/terms-of-use">Terms of Use</a></h4>
     <br>
-    <h3> The custom cursor for this game was taken from <a href="https://www.cursors-4u.com/"> Cursors-4u</a>, whch have their own respective <a href="https://www.tumblr.com/follow/cursors-4u">Tumblr</a> and <a href="https://x.com/cursors4u">X/Twitter</a></h3>
+    <h3> The custom cursor for this game was taken from <a href="https://www.cursors-4u.com/"> Cursors-4u</a>, whch have their own respective <a href="https://www.tumblr.com/follow/cursors-4u">Tumblr</a> and <a href="https://x.com/cursors4u">X (formerly Twitter)</a></h3>
     <h4> <a href="https://www.cursors-4u.com/fatp/terms.php">Terms of Service</a></h4>
 </div>
   

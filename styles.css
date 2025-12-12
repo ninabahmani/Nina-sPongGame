@@ -7,7 +7,7 @@
 #scoreText{
     font-family: "LoveMolly", sans-serif;
     font-size: 100px;
-    text-decoration-color:white;
+    color:white;
 }
 #resetBtn{
     font-family: "LoveMolly", sans-serif;
@@ -29,6 +29,12 @@
 
 body {
 background-color:#bb9457;
+
+boardBackground {
+    background-image: url(images/menu_board_t.png);
+
+
+}
 
 }
 

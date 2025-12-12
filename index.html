@@ -1,5 +1,6 @@
 <html>
   <head>
+    <!-- ughh i hate google chrome automatic pause on music-->
  <audio src="tobyfox.mp3" autoplay loop></audio>
 <title>Nina's Pong Game</title>
 <!-- FAVICONS-->
@@ -10,7 +11,8 @@
 <!-- the favicon of the coding was made witht he help of favicon.io: not ai. im not sure if that would count in the 30% ai limit but im labeling it just in case-->
 
 
-    <!-- nina, making music also counts as art. if you find out how to prove you've spent time on making music, then you can make ur own! tots fine if you cant find anything, cause toby fox will and always will be your holy grail <3
+    <!-- nina, making music also counts as art. if you fi
+     +nd out how to prove you've spent time on making music, then you can make ur own! tots fine if you cant find anything, cause toby fox will and always will be your holy grail <3
      the art can be coffee bean dividers (cute ikr) or like the night to morning animation (changing the color of the index.html to the light brownish color) u were talking about in the game html file!! ilysm ninabina-->
 
 
@@ -18,12 +20,10 @@
   </head>
 <img src="images/logo-new.png" alt="the logo to nina's pong game" width="1366" height="500"> 
 </img>
-
 </div>
-<br>
-<br>
-
 <center>
+  <button onclick="document.getElementById('tobyfox.mp3').play()">Play Music!</button>
+  <br>
 <div class="buttons"></div>
 
 
@@ -48,7 +48,7 @@
   <img id="gif" src="transition.gif" alt="Loading animation" style="display:none;">
 
   <!-- image acting as button to the game -->
-  <img src="images/play_button.png" alt="Go to GAME" style="cursor:pointer;" align-items:center; onclick="playGifAndRedirect()">
+  <img src="images/play_button.png" alt="Go to GAME" style="cursor:pointer; height: 220px;" align-items:center; onclick="playGifAndRedirect()">
 
   
 </body>
@@ -93,11 +93,12 @@ ok im back and my battery icon looks sooo weird dude-->
 
 <head>
  <script>
+  
     function playGif2AndRedirect() {
-      // Show the GIF
+      // show the GIF
       document.getElementById("gif2").style.display = "block";
 
-      // Redirect after 5 seconds (adjust to GIF length)
+      // redirect after 3 seconds (adjust to GIF length)
       setTimeout(function() {
         window.location.href = "settings.html";
       }, 3000);
@@ -109,7 +110,7 @@ ok im back and my battery icon looks sooo weird dude-->
   <img id="gif2" src="transition2.gif" alt="Loading animation" style="display:none; size: cover;">
 
   <!-- image acting as button to the game -->
-  <img src="images/settings_button.png" alt="Go to SETTINGS" style="cursor:pointer;" align-items:center; onclick="playGif2AndRedirect()">
+  <img src="images/settings_button.png" alt="Go to SETTINGS" style="cursor:pointer;height: 220px;" align-items:center; onclick="playGif2AndRedirect()">
 
   
 </body>
@@ -143,7 +144,7 @@ ok im back and my battery icon looks sooo weird dude-->
 </center>
 
 <div class="footer">
-<p> made with love by <a href="https://ninasresources.neocities.org/">ninabina♡</a>
+<p> made with lots of <span class="heart">♡</span> by <a href="https://ninasresources.neocities.org/">ninabina</a>
     <br>
     leave a pleasant comment on my <a href="https://ninasresources.neocities.org/guestbook.html">guestbook</a>, will you?
 
@@ -197,6 +198,23 @@ font-family: LoveMolly, sans-serif;
 
 body {
 background-color:#02023B;
+}
+
+.heart {
+color:red;
+
+
+}
+
+.music {
+font-family: "LoveMolly", sans-serif;
+    font-size: 22px;
+    width: 100px;
+    height: 50px;
+    border: 4px solid;
+    border-radius: 15px;
+    cursor: pointer;
+
 }
 </style>
 

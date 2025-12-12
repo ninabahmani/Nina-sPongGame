@@ -1,7 +1,9 @@
 <html>
   <head>
     <!-- ughh i hate google chrome automatic pause on music-->
- <audio src="tobyfox.mp3" autoplay loop></audio>
+ <audio id="tobyfox">
+  <source src="tobyfox.mp3" type="audio/mpeg">
+ </audio>
 <title>Nina's Pong Game</title>
 <!-- FAVICONS-->
 <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
@@ -22,7 +24,7 @@
 </img>
 </div>
 <center>
-  <button onclick="document.getElementById('tobyfox.mp3').play()">Play Music!</button>
+  <button onclick="document.getElementById('tobyfox').play()">Play Music!</button>
   <br>
 <div class="buttons"></div>
 

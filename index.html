@@ -5,7 +5,7 @@
   <source src="tobyfox.mp3" type="audio/mpeg">
  </audio>
 <title>Nina's Pong Game</title>
-<!-- FAVICONS-->
+<!-- FAVICONS ARE RIGHT HERE <3-->
 <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
@@ -16,6 +16,12 @@
     <!-- nina, making music also counts as art. if you fi
      +nd out how to prove you've spent time on making music, then you can make ur own! tots fine if you cant find anything, cause toby fox will and always will be your holy grail <3
      the art can be coffee bean dividers (cute ikr) or like the night to morning animation (changing the color of the index.html to the light brownish color) u were talking about in the game html file!! ilysm ninabina-->
+
+
+<div id="startup-screen">
+  <img src="startup.gif" alt="made with visual studio code and ibis paint">
+</div>
+
 
 
 <div class="title">
@@ -218,6 +224,34 @@ font-family: "LoveMolly", sans-serif;
     cursor: pointer;
 
 }
+
+#startup-screen {
+  position:fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1.2s ease;
+}
+
+#startup-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 </style>
 
+
+
+<script>
+  const splashDuration = 8400;
+
+setTimeout(() => {
+  document.getElementById("startup-screen").classList.add("hidden"); 
+}, splashDuration);
+
+</script>
 </html>

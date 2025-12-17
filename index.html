@@ -262,7 +262,17 @@ okayy nina im not sure why but the starting animaton just stays there enntirely 
 
 the debugger also says that document.getElementById is wrong? i'm not sure whats exactly happening here lol-->
 <script>
+const startupScreen = document.getElementById("startup-screen");
+const alreadyPlayed = sessionStorage.getItem("startupPlayed");
 
+if (alreadyPlayed) {
+  startupScreen.style.display = "none";
+} else {
+  setTimeout(() => {
+    startupScreen.classList.add("fade-out");
+    sessionStorage.setItem("startupPlayed", "true");
+  }, 8400);
+}
   const splashDuration = 8400;
 
 setTimeout(() => {

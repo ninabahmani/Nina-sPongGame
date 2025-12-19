@@ -151,10 +151,20 @@ ok im back and my battery icon looks sooo weird dude-->
       overflow: hidden;
     }
   </style>
+<!-- NINA! CHANGE THIS TO BE THE TUTORIAL AND MUSIC PLEASE THANKS ILY-->
+  <img src="images/music_button.png" style="height: 220px"; onclick="document.getElementById('tobyfox').play()";>
 
- <img src="images/music_button.png" style="height: 220px"; onclick="document.getElementById('tobyfox').play()";>
+
+ <img id="start-tutorial" src="images/tutorial_button.png" style="height: 220px";>
+
+<div id="tutorial-box" style="display:none;">
+  
+  <img id="character-sprite" src="">
+
+  <img id="dialogue-img" src="">
 
 
+</div>
 
 </a>
 </div>
@@ -250,7 +260,108 @@ font-family: "LoveMolly", sans-serif;
   pointer-events: none;
 }
 
+
+
+#tutorial-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #bb9457;
+  padding: 20px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+#character-sprite {
+  width: 500px;
+}
+
+#dialogue-img {
+  width: 750px;
+}
+
+#start-tutorial {
+  width: 220px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
 </style>
+
+
+<script>
+// 9 dialogue PNGs
+const dialogueImages = [
+  "images/tutorial/tutorial1.png",
+  "images/tutorial/tutorial2.png",
+  "images/tutorial/tutorial3.png",
+  "images/tutorial/tutorial4.png",
+  "images/tutorial/tutorial5.png",
+  "images/tutorial/tutorial6.png",
+  "images/tutorial/tutorial7.png",
+  "images/tutorial/tutorial8.png",
+  "images/tutorial/tutorial9.png"
+];
+
+// 4 sprite PNGs
+const spriteImages = [
+  "images/pennysprite_wave.png",
+  "images/pennysprite_welcome.png",
+  "images/pennysprite_nerd.png",
+  "images/pennysprite_shy.png"
+];
+
+// Which sprite goes with each dialogue
+const spriteForDialogue = [
+  0, 1, 1, 2, 2, 2, 3, 1, 0
+];
+
+let index = 0;
+let tutorialActive = false;
+
+const startBtn = document.getElementById("start-tutorial");
+const tutorialBox = document.getElementById("tutorial-box");
+const dialogueImg = document.getElementById("dialogue-img");
+const spriteImg = document.getElementById("character-sprite");
+
+// Start tutorial
+startBtn.addEventListener("click", () => {
+  startBtn.style.display = "none";
+  tutorialBox.style.display = "flex";
+  tutorialActive = true;
+
+  dialogueImg.src = dialogueImages[index];
+  spriteImg.src = spriteImages[spriteForDialogue[index]];
+});
+
+// Listen for SPACEBAR
+document.addEventListener("keydown", (event) => {
+  if (!tutorialActive) return;
+
+  if (event.code === "Space") {
+    event.preventDefault(); // stops page from scrolling
+
+    index++;
+
+    if (index < dialogueImages.length) {
+      dialogueImg.src = dialogueImages[index];
+      spriteImg.src = spriteImages[spriteForDialogue[index]];
+    } else {
+      tutorialBox.style.display = "none";
+      tutorialActive = false;
+    }
+  }
+});
+</script>
 
 
 <!-- nina: try finding out and asking your friend how to make the starting animartion appear only once. you may have to make new const values
